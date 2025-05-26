@@ -31,7 +31,7 @@ const Chatbot = () => {
     setLoading(true)
     setIsClicked(true);
     var data =JSON.parse(localStorage.getItem('user'))
-    const response=await axios.post('http://localhost:4000/chatbot',{
+    const response=await axios.post('https://finance-ai-be.vercel.app/chatbot',{
       question:input,
       end:true
     },{
@@ -53,7 +53,7 @@ const Chatbot = () => {
     setGraphLoader(true)
     var data =JSON.parse(localStorage.getItem('user'))
     if(!chart.data){
-      var response = await axios.get('http://localhost:4000/graphs',{
+      var response = await axios.get('https://finance-ai-be.vercel.app/graphs',{
         headers:{
           userId:data.email
         }
