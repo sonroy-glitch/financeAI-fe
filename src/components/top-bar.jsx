@@ -96,7 +96,7 @@ const TopBar = () => {
             <div className="text-lg font-bold items-center cursor-pointer w-10 h-10 flex justify-center rounded-full bg-white text-black shadow-md hover:scale-105 transition mb-1">
               {
                 signedIn?
-                <img src={imgUrl.image} className='rounded-full'/>
+                <img src={imgUrl?.image} className='rounded-full'/>
                 :'U'
               }
             </div>
