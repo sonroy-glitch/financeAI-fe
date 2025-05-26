@@ -65,7 +65,7 @@ const Analyse = () => {
            var hold =JSON.parse(localStorage.getItem('user'))
            console.log(hold.email)
           //  console.log(data)
-           var response = await axios.post("https://finance-ai-be.vercel.app/analyzer",{
+           var response = await axios.post("https://api.summarizer.shop/analyzer",{
             userId:currentIdVal,
             data,
             end:true
