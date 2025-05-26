@@ -54,7 +54,8 @@ const TopBar = () => {
   }, [])
   async function logout(){
     setLogoutLoader(true)
-    var response=await axios.get("https://api.summarizer.shop/signout")
+    Cookies.remove('token', { path: '/' });
+Cookies.remove('status', { path: '/' });
     localStorage.removeItem('user')
     setLogoutLoader(false)
     navigate('/')
