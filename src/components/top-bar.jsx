@@ -54,7 +54,7 @@ const TopBar = () => {
   }, [])
   async function logout(){
     setLogoutLoader(true)
-    var response=await axios.get("http://localhost:4000/signout")
+    var response=await axios.get("https://finance-ai-be.vercel.app/signout")
     localStorage.removeItem('user')
     setLogoutLoader(false)
     navigate('/')
