@@ -25,7 +25,7 @@ export function LoginForm({ className, ...props }) {
   async function login() {
     setLoginLoader(true)
     event.preventDefault();
-    const response=await axios.post('http://localhost:4000/signin',{
+    const response=await axios.post('https://finance-ai-be.vercel.app/signin',{
       email,
       password,
       name:'',
@@ -45,7 +45,7 @@ export function LoginForm({ className, ...props }) {
 
     const data = jwtDecode(res.credential);
     console.log(data)
-    const response=await axios.post('http://localhost:4000/signin',{
+    const response=await axios.post('https://finance-ai-be.vercel.app/signin',{
       email:data.email,
       name:data.name,
       image:data.picture
