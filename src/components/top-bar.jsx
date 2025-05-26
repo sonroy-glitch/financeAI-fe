@@ -54,8 +54,14 @@ const TopBar = () => {
   }, [])
   async function logout(){
     setLogoutLoader(true)
-    Cookies.remove('token', { path: '/' });
-Cookies.remove('status', { path: '/' });
+    Cookies.remove('token', {
+  path: '/',
+  domain: '.summarizer.shop'
+});Cookies.remove('status', {
+  path: '/',
+  domain: '.summarizer.shop'
+});
+
     localStorage.removeItem('user')
     setLogoutLoader(false)
     navigate('/')
