@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+qimport { cn } from "@/lib/utils";
 import react, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -25,7 +25,7 @@ export function LoginForm({ className, ...props }) {
   async function login() {
     setLoginLoader(true)
     event.preventDefault();
-    const response=await axios.post('https://finance-ai-be.vercel.app/signin',{
+    const response=await axios.post('https://api.summarizer.shop/signin',{
       email,
       password,
       name:'',
@@ -45,7 +45,7 @@ export function LoginForm({ className, ...props }) {
 
     const data = jwtDecode(res.credential);
     console.log(data)
-    const response=await axios.post('https://finance-ai-be.vercel.app/signin',{
+    const response=await axios.post('https://api.summarizer.shop/signin',{
       email:data.email,
       name:data.name,
       image:data.picture
